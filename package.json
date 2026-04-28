@@ -1,0 +1,60 @@
+{
+  "name": "porra-mundial",
+  "version": "0.1.0",
+  "private": true,
+  "packageManager": "npm@11.12.1",
+  "engines": {
+    "node": ">=24.0.0"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "prisma:generate": "prisma generate",
+    "prisma:validate": "prisma validate",
+    "prisma:migrate": "prisma migrate dev",
+    "prisma:deploy": "prisma migrate deploy",
+    "prisma:studio": "prisma studio",
+    "db:up": "docker compose up -d postgres",
+    "db:down": "docker compose down",
+    "db:setup": "npm run db:up && npm run prisma:migrate && npm run db:seed && npm run db:verify",
+    "db:seed": "tsx prisma/seed.ts",
+    "db:verify": "tsx prisma/verify-local-db.ts",
+    "check": "npm run lint && npm run prisma:generate && npm run typecheck && npm run test && npm run prisma:validate",
+    "ci": "eslint . && prisma generate && tsc --noEmit && vitest run && prisma validate && prettier --check . && next build"
+  },
+  "dependencies": {
+    "@prisma/client": "6.19.0",
+    "bcryptjs": "^3.0.2",
+    "lucide-react": "^1.8.0",
+    "next": "^16.1.6",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4",
+    "zod": "^4.1.5"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.1.13",
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.3.0",
+    "@types/bcryptjs": "^2.4.6",
+    "@types/node": "^24.0.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "eslint": "^9.39.4",
+    "eslint-config-next": "^16.1.6",
+    "jsdom": "^26.1.0",
+    "postcss": "^8.5.3",
+    "prettier": "^3.5.3",
+    "prisma": "6.19.0",
+    "tailwindcss": "^4.1.13",
+    "tsx": "^4.20.3",
+    "typescript": "^5.9.3",
+    "vitest": "^4.0.18"
+  }
+}

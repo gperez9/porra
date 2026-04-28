@@ -1,0 +1,386 @@
+[
+  {
+    "id": "MEX",
+    "name": "México",
+    "shortName": "México",
+    "fifaCode": "MEX",
+    "flagCode": "MX",
+    "fifaRankingSeed": 15
+  },
+  {
+    "id": "RSA",
+    "name": "Sudáfrica",
+    "shortName": "Sudáfrica",
+    "fifaCode": "RSA",
+    "flagCode": "ZA",
+    "fifaRankingSeed": 60
+  },
+  {
+    "id": "KOR",
+    "name": "Corea del Sur",
+    "shortName": "Corea",
+    "fifaCode": "KOR",
+    "flagCode": "KR",
+    "fifaRankingSeed": 25
+  },
+  {
+    "id": "CZE",
+    "name": "Chequia",
+    "shortName": "Chequia",
+    "fifaCode": "CZE",
+    "flagCode": "CZ",
+    "fifaRankingSeed": 41
+  },
+  {
+    "id": "CAN",
+    "name": "Canadá",
+    "shortName": "Canadá",
+    "fifaCode": "CAN",
+    "flagCode": "CA",
+    "fifaRankingSeed": 30
+  },
+  {
+    "id": "BIH",
+    "name": "Bosnia y Herzegovina",
+    "shortName": "Bosnia",
+    "fifaCode": "BIH",
+    "flagCode": "BA",
+    "fifaRankingSeed": 65
+  },
+  {
+    "id": "QAT",
+    "name": "Catar",
+    "shortName": "Catar",
+    "fifaCode": "QAT",
+    "flagCode": "QA",
+    "fifaRankingSeed": 55
+  },
+  {
+    "id": "SUI",
+    "name": "Suiza",
+    "shortName": "Suiza",
+    "fifaCode": "SUI",
+    "flagCode": "CH",
+    "fifaRankingSeed": 19
+  },
+  {
+    "id": "BRA",
+    "name": "Brasil",
+    "shortName": "Brasil",
+    "fifaCode": "BRA",
+    "flagCode": "BR",
+    "fifaRankingSeed": 6
+  },
+  {
+    "id": "MAR",
+    "name": "Marruecos",
+    "shortName": "Marruecos",
+    "fifaCode": "MAR",
+    "flagCode": "MA",
+    "fifaRankingSeed": 8
+  },
+  {
+    "id": "HAI",
+    "name": "Haití",
+    "shortName": "Haití",
+    "fifaCode": "HAI",
+    "flagCode": "HT",
+    "fifaRankingSeed": 83
+  },
+  {
+    "id": "SCO",
+    "name": "Escocia",
+    "shortName": "Escocia",
+    "fifaCode": "SCO",
+    "flagCode": "GB-SCT",
+    "fifaRankingSeed": 43
+  },
+  {
+    "id": "USA",
+    "name": "Estados Unidos",
+    "shortName": "EE. UU.",
+    "fifaCode": "USA",
+    "flagCode": "US",
+    "fifaRankingSeed": 16
+  },
+  {
+    "id": "PAR",
+    "name": "Paraguay",
+    "shortName": "Paraguay",
+    "fifaCode": "PAR",
+    "flagCode": "PY",
+    "fifaRankingSeed": 40
+  },
+  {
+    "id": "AUS",
+    "name": "Australia",
+    "shortName": "Australia",
+    "fifaCode": "AUS",
+    "flagCode": "AU",
+    "fifaRankingSeed": 27
+  },
+  {
+    "id": "TUR",
+    "name": "Turquía",
+    "shortName": "Turquía",
+    "fifaCode": "TUR",
+    "flagCode": "TR",
+    "fifaRankingSeed": 22
+  },
+  {
+    "id": "GER",
+    "name": "Alemania",
+    "shortName": "Alemania",
+    "fifaCode": "GER",
+    "flagCode": "DE",
+    "fifaRankingSeed": 10
+  },
+  {
+    "id": "CUW",
+    "name": "Curazao",
+    "shortName": "Curazao",
+    "fifaCode": "CUW",
+    "flagCode": "CW",
+    "fifaRankingSeed": 82
+  },
+  {
+    "id": "CIV",
+    "name": "Costa de Marfil",
+    "shortName": "Costa de Marfil",
+    "fifaCode": "CIV",
+    "flagCode": "CI",
+    "fifaRankingSeed": 34
+  },
+  {
+    "id": "ECU",
+    "name": "Ecuador",
+    "shortName": "Ecuador",
+    "fifaCode": "ECU",
+    "flagCode": "EC",
+    "fifaRankingSeed": 23
+  },
+  {
+    "id": "NED",
+    "name": "Países Bajos",
+    "shortName": "Países Bajos",
+    "fifaCode": "NED",
+    "flagCode": "NL",
+    "fifaRankingSeed": 7
+  },
+  {
+    "id": "JPN",
+    "name": "Japón",
+    "shortName": "Japón",
+    "fifaCode": "JPN",
+    "flagCode": "JP",
+    "fifaRankingSeed": 18
+  },
+  {
+    "id": "SWE",
+    "name": "Suecia",
+    "shortName": "Suecia",
+    "fifaCode": "SWE",
+    "flagCode": "SE",
+    "fifaRankingSeed": 38
+  },
+  {
+    "id": "TUN",
+    "name": "Túnez",
+    "shortName": "Túnez",
+    "fifaCode": "TUN",
+    "flagCode": "TN",
+    "fifaRankingSeed": 44
+  },
+  {
+    "id": "BEL",
+    "name": "Bélgica",
+    "shortName": "Bélgica",
+    "fifaCode": "BEL",
+    "flagCode": "BE",
+    "fifaRankingSeed": 9
+  },
+  {
+    "id": "EGY",
+    "name": "Egipto",
+    "shortName": "Egipto",
+    "fifaCode": "EGY",
+    "flagCode": "EG",
+    "fifaRankingSeed": 29
+  },
+  {
+    "id": "IRN",
+    "name": "Irán",
+    "shortName": "Irán",
+    "fifaCode": "IRN",
+    "flagCode": "IR",
+    "fifaRankingSeed": 21
+  },
+  {
+    "id": "NZL",
+    "name": "Nueva Zelanda",
+    "shortName": "Nueva Zelanda",
+    "fifaCode": "NZL",
+    "flagCode": "NZ",
+    "fifaRankingSeed": 85
+  },
+  {
+    "id": "ESP",
+    "name": "España",
+    "shortName": "España",
+    "fifaCode": "ESP",
+    "flagCode": "ES",
+    "fifaRankingSeed": 2
+  },
+  {
+    "id": "CPV",
+    "name": "Cabo Verde",
+    "shortName": "Cabo Verde",
+    "fifaCode": "CPV",
+    "flagCode": "CV",
+    "fifaRankingSeed": 69
+  },
+  {
+    "id": "KSA",
+    "name": "Arabia Saudí",
+    "shortName": "Arabia Saudí",
+    "fifaCode": "KSA",
+    "flagCode": "SA",
+    "fifaRankingSeed": 61
+  },
+  {
+    "id": "URU",
+    "name": "Uruguay",
+    "shortName": "Uruguay",
+    "fifaCode": "URU",
+    "flagCode": "UY",
+    "fifaRankingSeed": 17
+  },
+  {
+    "id": "FRA",
+    "name": "Francia",
+    "shortName": "Francia",
+    "fifaCode": "FRA",
+    "flagCode": "FR",
+    "fifaRankingSeed": 1
+  },
+  {
+    "id": "SEN",
+    "name": "Senegal",
+    "shortName": "Senegal",
+    "fifaCode": "SEN",
+    "flagCode": "SN",
+    "fifaRankingSeed": 14
+  },
+  {
+    "id": "IRQ",
+    "name": "Irak",
+    "shortName": "Irak",
+    "fifaCode": "IRQ",
+    "flagCode": "IQ",
+    "fifaRankingSeed": 57
+  },
+  {
+    "id": "NOR",
+    "name": "Noruega",
+    "shortName": "Noruega",
+    "fifaCode": "NOR",
+    "flagCode": "NO",
+    "fifaRankingSeed": 31
+  },
+  {
+    "id": "ARG",
+    "name": "Argentina",
+    "shortName": "Argentina",
+    "fifaCode": "ARG",
+    "flagCode": "AR",
+    "fifaRankingSeed": 3
+  },
+  {
+    "id": "ALG",
+    "name": "Argelia",
+    "shortName": "Argelia",
+    "fifaCode": "ALG",
+    "flagCode": "DZ",
+    "fifaRankingSeed": 28
+  },
+  {
+    "id": "AUT",
+    "name": "Austria",
+    "shortName": "Austria",
+    "fifaCode": "AUT",
+    "flagCode": "AT",
+    "fifaRankingSeed": 24
+  },
+  {
+    "id": "JOR",
+    "name": "Jordania",
+    "shortName": "Jordania",
+    "fifaCode": "JOR",
+    "flagCode": "JO",
+    "fifaRankingSeed": 63
+  },
+  {
+    "id": "POR",
+    "name": "Portugal",
+    "shortName": "Portugal",
+    "fifaCode": "POR",
+    "flagCode": "PT",
+    "fifaRankingSeed": 5
+  },
+  {
+    "id": "COD",
+    "name": "RD Congo",
+    "shortName": "RD Congo",
+    "fifaCode": "COD",
+    "flagCode": "CD",
+    "fifaRankingSeed": 46
+  },
+  {
+    "id": "UZB",
+    "name": "Uzbekistán",
+    "shortName": "Uzbekistán",
+    "fifaCode": "UZB",
+    "flagCode": "UZ",
+    "fifaRankingSeed": 50
+  },
+  {
+    "id": "COL",
+    "name": "Colombia",
+    "shortName": "Colombia",
+    "fifaCode": "COL",
+    "flagCode": "CO",
+    "fifaRankingSeed": 13
+  },
+  {
+    "id": "ENG",
+    "name": "Inglaterra",
+    "shortName": "Inglaterra",
+    "fifaCode": "ENG",
+    "flagCode": "GB-ENG",
+    "fifaRankingSeed": 4
+  },
+  {
+    "id": "CRO",
+    "name": "Croacia",
+    "shortName": "Croacia",
+    "fifaCode": "CRO",
+    "flagCode": "HR",
+    "fifaRankingSeed": 11
+  },
+  {
+    "id": "GHA",
+    "name": "Ghana",
+    "shortName": "Ghana",
+    "fifaCode": "GHA",
+    "flagCode": "GH",
+    "fifaRankingSeed": 74
+  },
+  {
+    "id": "PAN",
+    "name": "Panamá",
+    "shortName": "Panamá",
+    "fifaCode": "PAN",
+    "flagCode": "PA",
+    "fifaRankingSeed": 33
+  }
+]

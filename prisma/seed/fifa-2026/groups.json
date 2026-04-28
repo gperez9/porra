@@ -1,0 +1,14 @@
+[
+  { "code": "A", "slots": ["MEX", "RSA", "KOR", "CZE"] },
+  { "code": "B", "slots": ["CAN", "BIH", "QAT", "SUI"] },
+  { "code": "C", "slots": ["BRA", "MAR", "HAI", "SCO"] },
+  { "code": "D", "slots": ["USA", "PAR", "AUS", "TUR"] },
+  { "code": "E", "slots": ["GER", "CUW", "CIV", "ECU"] },
+  { "code": "F", "slots": ["NED", "JPN", "SWE", "TUN"] },
+  { "code": "G", "slots": ["BEL", "EGY", "IRN", "NZL"] },
+  { "code": "H", "slots": ["ESP", "CPV", "KSA", "URU"] },
+  { "code": "I", "slots": ["FRA", "SEN", "IRQ", "NOR"] },
+  { "code": "J", "slots": ["ARG", "ALG", "AUT", "JOR"] },
+  { "code": "K", "slots": ["POR", "COD", "UZB", "COL"] },
+  { "code": "L", "slots": ["ENG", "CRO", "GHA", "PAN"] }
+]

@@ -1,0 +1,35 @@
+# dependencies
+node_modules/
+.tools/
+.pnp
+.pnp.*
+
+# next
+.next/
+out/
+
+# production
+build/
+dist/
+tsconfig.tsbuildinfo
+
+# prisma
+prisma/dev.db
+
+# env
+.env
+.env*.local
+
+# logs
+*.log*
+
+# OS/editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# coverage
+coverage/
+test-results/
+playwright-report/

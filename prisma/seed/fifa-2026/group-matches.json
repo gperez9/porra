@@ -1,0 +1,578 @@
+[
+  {
+    "matchNo": "M1",
+    "groupCode": "A",
+    "home": "MEX",
+    "away": "RSA",
+    "venue": "Mexico City Stadium",
+    "date": "2026-06-11"
+  },
+  {
+    "matchNo": "M2",
+    "groupCode": "A",
+    "home": "KOR",
+    "away": "CZE",
+    "venue": "Estadio Guadalajara",
+    "date": "2026-06-11"
+  },
+  {
+    "matchNo": "M3",
+    "groupCode": "B",
+    "home": "CAN",
+    "away": "BIH",
+    "venue": "Toronto Stadium",
+    "date": "2026-06-12"
+  },
+  {
+    "matchNo": "M4",
+    "groupCode": "D",
+    "home": "USA",
+    "away": "PAR",
+    "venue": "Los Angeles Stadium",
+    "date": "2026-06-12"
+  },
+  {
+    "matchNo": "M5",
+    "groupCode": "C",
+    "home": "HAI",
+    "away": "SCO",
+    "venue": "Boston Stadium",
+    "date": "2026-06-13"
+  },
+  {
+    "matchNo": "M6",
+    "groupCode": "D",
+    "home": "AUS",
+    "away": "TUR",
+    "venue": "BC Place Vancouver",
+    "date": "2026-06-13"
+  },
+  {
+    "matchNo": "M7",
+    "groupCode": "C",
+    "home": "BRA",
+    "away": "MAR",
+    "venue": "New York New Jersey Stadium",
+    "date": "2026-06-13"
+  },
+  {
+    "matchNo": "M8",
+    "groupCode": "B",
+    "home": "QAT",
+    "away": "SUI",
+    "venue": "San Francisco Bay Area Stadium",
+    "date": "2026-06-13"
+  },
+  {
+    "matchNo": "M9",
+    "groupCode": "E",
+    "home": "CIV",
+    "away": "ECU",
+    "venue": "Philadelphia Stadium",
+    "date": "2026-06-14"
+  },
+  {
+    "matchNo": "M10",
+    "groupCode": "E",
+    "home": "GER",
+    "away": "CUW",
+    "venue": "Houston Stadium",
+    "date": "2026-06-14"
+  },
+  {
+    "matchNo": "M11",
+    "groupCode": "F",
+    "home": "NED",
+    "away": "JPN",
+    "venue": "Dallas Stadium",
+    "date": "2026-06-14"
+  },
+  {
+    "matchNo": "M12",
+    "groupCode": "F",
+    "home": "SWE",
+    "away": "TUN",
+    "venue": "Estadio Monterrey",
+    "date": "2026-06-14"
+  },
+  {
+    "matchNo": "M13",
+    "groupCode": "H",
+    "home": "KSA",
+    "away": "URU",
+    "venue": "Miami Stadium",
+    "date": "2026-06-15"
+  },
+  {
+    "matchNo": "M14",
+    "groupCode": "H",
+    "home": "ESP",
+    "away": "CPV",
+    "venue": "Atlanta Stadium",
+    "date": "2026-06-15"
+  },
+  {
+    "matchNo": "M15",
+    "groupCode": "G",
+    "home": "IRN",
+    "away": "NZL",
+    "venue": "Los Angeles Stadium",
+    "date": "2026-06-15"
+  },
+  {
+    "matchNo": "M16",
+    "groupCode": "G",
+    "home": "BEL",
+    "away": "EGY",
+    "venue": "Seattle Stadium",
+    "date": "2026-06-15"
+  },
+  {
+    "matchNo": "M17",
+    "groupCode": "I",
+    "home": "FRA",
+    "away": "SEN",
+    "venue": "New York New Jersey Stadium",
+    "date": "2026-06-16"
+  },
+  {
+    "matchNo": "M18",
+    "groupCode": "I",
+    "home": "IRQ",
+    "away": "NOR",
+    "venue": "Boston Stadium",
+    "date": "2026-06-16"
+  },
+  {
+    "matchNo": "M19",
+    "groupCode": "J",
+    "home": "ARG",
+    "away": "ALG",
+    "venue": "Kansas City Stadium",
+    "date": "2026-06-16"
+  },
+  {
+    "matchNo": "M20",
+    "groupCode": "J",
+    "home": "AUT",
+    "away": "JOR",
+    "venue": "San Francisco Bay Area Stadium",
+    "date": "2026-06-16"
+  },
+  {
+    "matchNo": "M21",
+    "groupCode": "L",
+    "home": "GHA",
+    "away": "PAN",
+    "venue": "Toronto Stadium",
+    "date": "2026-06-17"
+  },
+  {
+    "matchNo": "M22",
+    "groupCode": "L",
+    "home": "ENG",
+    "away": "CRO",
+    "venue": "Dallas Stadium",
+    "date": "2026-06-17"
+  },
+  {
+    "matchNo": "M23",
+    "groupCode": "K",
+    "home": "POR",
+    "away": "COD",
+    "venue": "Houston Stadium",
+    "date": "2026-06-17"
+  },
+  {
+    "matchNo": "M24",
+    "groupCode": "K",
+    "home": "UZB",
+    "away": "COL",
+    "venue": "Mexico City Stadium",
+    "date": "2026-06-17"
+  },
+  {
+    "matchNo": "M25",
+    "groupCode": "A",
+    "home": "CZE",
+    "away": "RSA",
+    "venue": "Atlanta Stadium",
+    "date": "2026-06-18"
+  },
+  {
+    "matchNo": "M26",
+    "groupCode": "B",
+    "home": "SUI",
+    "away": "BIH",
+    "venue": "Los Angeles Stadium",
+    "date": "2026-06-18"
+  },
+  {
+    "matchNo": "M27",
+    "groupCode": "B",
+    "home": "CAN",
+    "away": "QAT",
+    "venue": "BC Place Vancouver",
+    "date": "2026-06-18"
+  },
+  {
+    "matchNo": "M28",
+    "groupCode": "A",
+    "home": "MEX",
+    "away": "KOR",
+    "venue": "Estadio Guadalajara",
+    "date": "2026-06-18"
+  },
+  {
+    "matchNo": "M29",
+    "groupCode": "C",
+    "home": "BRA",
+    "away": "HAI",
+    "venue": "Philadelphia Stadium",
+    "date": "2026-06-19"
+  },
+  {
+    "matchNo": "M30",
+    "groupCode": "C",
+    "home": "SCO",
+    "away": "MAR",
+    "venue": "Boston Stadium",
+    "date": "2026-06-19"
+  },
+  {
+    "matchNo": "M31",
+    "groupCode": "D",
+    "home": "TUR",
+    "away": "PAR",
+    "venue": "San Francisco Bay Area Stadium",
+    "date": "2026-06-19"
+  },
+  {
+    "matchNo": "M32",
+    "groupCode": "D",
+    "home": "USA",
+    "away": "AUS",
+    "venue": "Seattle Stadium",
+    "date": "2026-06-19"
+  },
+  {
+    "matchNo": "M33",
+    "groupCode": "E",
+    "home": "GER",
+    "away": "CIV",
+    "venue": "Toronto Stadium",
+    "date": "2026-06-20"
+  },
+  {
+    "matchNo": "M34",
+    "groupCode": "E",
+    "home": "ECU",
+    "away": "CUW",
+    "venue": "Kansas City Stadium",
+    "date": "2026-06-20"
+  },
+  {
+    "matchNo": "M35",
+    "groupCode": "F",
+    "home": "NED",
+    "away": "SWE",
+    "venue": "Houston Stadium",
+    "date": "2026-06-20"
+  },
+  {
+    "matchNo": "M36",
+    "groupCode": "F",
+    "home": "TUN",
+    "away": "JPN",
+    "venue": "Estadio Monterrey",
+    "date": "2026-06-20"
+  },
+  {
+    "matchNo": "M37",
+    "groupCode": "H",
+    "home": "URU",
+    "away": "CPV",
+    "venue": "Miami Stadium",
+    "date": "2026-06-21"
+  },
+  {
+    "matchNo": "M38",
+    "groupCode": "H",
+    "home": "ESP",
+    "away": "KSA",
+    "venue": "Atlanta Stadium",
+    "date": "2026-06-21"
+  },
+  {
+    "matchNo": "M39",
+    "groupCode": "G",
+    "home": "BEL",
+    "away": "IRN",
+    "venue": "Los Angeles Stadium",
+    "date": "2026-06-21"
+  },
+  {
+    "matchNo": "M40",
+    "groupCode": "G",
+    "home": "NZL",
+    "away": "EGY",
+    "venue": "BC Place Vancouver",
+    "date": "2026-06-21"
+  },
+  {
+    "matchNo": "M41",
+    "groupCode": "I",
+    "home": "NOR",
+    "away": "SEN",
+    "venue": "New York New Jersey Stadium",
+    "date": "2026-06-22"
+  },
+  {
+    "matchNo": "M42",
+    "groupCode": "I",
+    "home": "FRA",
+    "away": "IRQ",
+    "venue": "Philadelphia Stadium",
+    "date": "2026-06-22"
+  },
+  {
+    "matchNo": "M43",
+    "groupCode": "J",
+    "home": "ARG",
+    "away": "AUT",
+    "venue": "Dallas Stadium",
+    "date": "2026-06-22"
+  },
+  {
+    "matchNo": "M44",
+    "groupCode": "J",
+    "home": "JOR",
+    "away": "ALG",
+    "venue": "San Francisco Bay Area Stadium",
+    "date": "2026-06-22"
+  },
+  {
+    "matchNo": "M45",
+    "groupCode": "L",
+    "home": "ENG",
+    "away": "GHA",
+    "venue": "Boston Stadium",
+    "date": "2026-06-23"
+  },
+  {
+    "matchNo": "M46",
+    "groupCode": "L",
+    "home": "PAN",
+    "away": "CRO",
+    "venue": "Toronto Stadium",
+    "date": "2026-06-23"
+  },
+  {
+    "matchNo": "M47",
+    "groupCode": "K",
+    "home": "POR",
+    "away": "UZB",
+    "venue": "Houston Stadium",
+    "date": "2026-06-23"
+  },
+  {
+    "matchNo": "M48",
+    "groupCode": "K",
+    "home": "COL",
+    "away": "COD",
+    "venue": "Estadio Guadalajara",
+    "date": "2026-06-23"
+  },
+  {
+    "matchNo": "M49",
+    "groupCode": "C",
+    "home": "SCO",
+    "away": "BRA",
+    "venue": "Miami Stadium",
+    "date": "2026-06-24"
+  },
+  {
+    "matchNo": "M50",
+    "groupCode": "C",
+    "home": "MAR",
+    "away": "HAI",
+    "venue": "Atlanta Stadium",
+    "date": "2026-06-24"
+  },
+  {
+    "matchNo": "M51",
+    "groupCode": "B",
+    "home": "SUI",
+    "away": "CAN",
+    "venue": "BC Place Vancouver",
+    "date": "2026-06-24"
+  },
+  {
+    "matchNo": "M52",
+    "groupCode": "B",
+    "home": "BIH",
+    "away": "QAT",
+    "venue": "Seattle Stadium",
+    "date": "2026-06-24"
+  },
+  {
+    "matchNo": "M53",
+    "groupCode": "A",
+    "home": "CZE",
+    "away": "MEX",
+    "venue": "Mexico City Stadium",
+    "date": "2026-06-24"
+  },
+  {
+    "matchNo": "M54",
+    "groupCode": "A",
+    "home": "RSA",
+    "away": "KOR",
+    "venue": "Estadio Monterrey",
+    "date": "2026-06-24"
+  },
+  {
+    "matchNo": "M55",
+    "groupCode": "E",
+    "home": "CUW",
+    "away": "CIV",
+    "venue": "Philadelphia Stadium",
+    "date": "2026-06-25"
+  },
+  {
+    "matchNo": "M56",
+    "groupCode": "E",
+    "home": "ECU",
+    "away": "GER",
+    "venue": "New York New Jersey Stadium",
+    "date": "2026-06-25"
+  },
+  {
+    "matchNo": "M57",
+    "groupCode": "F",
+    "home": "JPN",
+    "away": "SWE",
+    "venue": "Dallas Stadium",
+    "date": "2026-06-25"
+  },
+  {
+    "matchNo": "M58",
+    "groupCode": "F",
+    "home": "TUN",
+    "away": "NED",
+    "venue": "Kansas City Stadium",
+    "date": "2026-06-25"
+  },
+  {
+    "matchNo": "M59",
+    "groupCode": "D",
+    "home": "TUR",
+    "away": "USA",
+    "venue": "Los Angeles Stadium",
+    "date": "2026-06-25"
+  },
+  {
+    "matchNo": "M60",
+    "groupCode": "D",
+    "home": "PAR",
+    "away": "AUS",
+    "venue": "San Francisco Bay Area Stadium",
+    "date": "2026-06-25"
+  },
+  {
+    "matchNo": "M61",
+    "groupCode": "I",
+    "home": "NOR",
+    "away": "FRA",
+    "venue": "Boston Stadium",
+    "date": "2026-06-26"
+  },
+  {
+    "matchNo": "M62",
+    "groupCode": "I",
+    "home": "SEN",
+    "away": "IRQ",
+    "venue": "Toronto Stadium",
+    "date": "2026-06-26"
+  },
+  {
+    "matchNo": "M63",
+    "groupCode": "G",
+    "home": "EGY",
+    "away": "IRN",
+    "venue": "Seattle Stadium",
+    "date": "2026-06-26"
+  },
+  {
+    "matchNo": "M64",
+    "groupCode": "G",
+    "home": "NZL",
+    "away": "BEL",
+    "venue": "BC Place Vancouver",
+    "date": "2026-06-26"
+  },
+  {
+    "matchNo": "M65",
+    "groupCode": "H",
+    "home": "CPV",
+    "away": "KSA",
+    "venue": "Houston Stadium",
+    "date": "2026-06-26"
+  },
+  {
+    "matchNo": "M66",
+    "groupCode": "H",
+    "home": "URU",
+    "away": "ESP",
+    "venue": "Estadio Guadalajara",
+    "date": "2026-06-26"
+  },
+  {
+    "matchNo": "M67",
+    "groupCode": "L",
+    "home": "PAN",
+    "away": "ENG",
+    "venue": "New York New Jersey Stadium",
+    "date": "2026-06-27"
+  },
+  {
+    "matchNo": "M68",
+    "groupCode": "L",
+    "home": "CRO",
+    "away": "GHA",
+    "venue": "Philadelphia Stadium",
+    "date": "2026-06-27"
+  },
+  {
+    "matchNo": "M69",
+    "groupCode": "J",
+    "home": "ALG",
+    "away": "AUT",
+    "venue": "Kansas City Stadium",
+    "date": "2026-06-27"
+  },
+  {
+    "matchNo": "M70",
+    "groupCode": "J",
+    "home": "JOR",
+    "away": "ARG",
+    "venue": "Dallas Stadium",
+    "date": "2026-06-27"
+  },
+  {
+    "matchNo": "M71",
+    "groupCode": "K",
+    "home": "COL",
+    "away": "POR",
+    "venue": "Miami Stadium",
+    "date": "2026-06-27"
+  },
+  {
+    "matchNo": "M72",
+    "groupCode": "K",
+    "home": "COD",
+    "away": "UZB",
+    "venue": "Atlanta Stadium",
+    "date": "2026-06-27"
+  }
+]

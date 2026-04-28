@@ -1,0 +1,22 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: porra-mundial-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: porra_mundial
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_HOST_AUTH_METHOD: trust
+    ports:
+      - "55432:5432"
+    volumes:
+      - porra_mundial_postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d porra_mundial"]
+      interval: 5s
+      timeout: 5s
+      retries: 12
+
+volumes:
+  porra_mundial_postgres_data:

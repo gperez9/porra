@@ -1,0 +1,217 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f3f6f1;
+  --foreground: #142018;
+  --muted: #647064;
+  --surface: #ffffff;
+  --surface-soft: #f8faf6;
+  --surface-strong: #e8efe4;
+  --accent: #0f7a4b;
+  --accent-strong: #075936;
+  --accent-warm: #c88921;
+  --ink-soft: #243227;
+  --border: #d8e1d4;
+  --border-strong: #bdcbb8;
+  --shadow-soft: 0 18px 45px rgb(30 47 33 / 0.09);
+  --shadow-card: 0 10px 28px rgb(30 47 33 / 0.08);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-height: 100%;
+}
+
+body {
+  min-height: 100%;
+  margin: 0;
+  background:
+    radial-gradient(circle at 13% 8%, rgb(15 122 75 / 0.16), transparent 23rem),
+    linear-gradient(135deg, rgb(200 137 33 / 0.13), transparent 31rem),
+    linear-gradient(180deg, rgb(255 255 255 / 0.55), transparent 18rem),
+    var(--background);
+  color: var(--foreground);
+  font-family:
+    Inter,
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+  text-rendering: optimizeLegibility;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+:focus-visible {
+  outline: 3px solid rgb(11 127 79 / 0.45);
+  outline-offset: 3px;
+}
+
+.app-shell {
+  margin-inline: auto;
+  min-height: 100vh;
+  width: 100%;
+  max-width: 72rem;
+  padding: 2rem 1.25rem;
+}
+
+.page-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 1.25rem;
+}
+
+.eyebrow {
+  color: var(--accent-strong);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.panel {
+  border: 1px solid rgb(216 225 212 / 0.9);
+  background:
+    linear-gradient(180deg, rgb(255 255 255 / 0.95), rgb(248 250 246 / 0.92)),
+    var(--surface);
+  box-shadow: var(--shadow-card);
+}
+
+.panel-muted {
+  border: 1px solid var(--border);
+  background: rgb(255 255 255 / 0.66);
+}
+
+.action-primary,
+.action-secondary {
+  display: inline-flex;
+  min-height: 2.75rem;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border-radius: 0.5rem;
+  padding-inline: 1rem;
+  font-size: 0.875rem;
+  font-weight: 750;
+  transition:
+    background-color 150ms ease,
+    border-color 150ms ease,
+    box-shadow 150ms ease,
+    transform 150ms ease;
+}
+
+.action-primary {
+  border: 1px solid rgb(7 89 54 / 0.24);
+  background: linear-gradient(135deg, var(--accent), var(--accent-strong));
+  color: white;
+  box-shadow: 0 10px 22px rgb(15 122 75 / 0.22);
+}
+
+.action-secondary {
+  border: 1px solid var(--border-strong);
+  background: rgb(255 255 255 / 0.76);
+  color: var(--ink-soft);
+}
+
+.action-primary:hover,
+.action-secondary:hover {
+  transform: translateY(-1px);
+}
+
+.action-primary:hover {
+  box-shadow: 0 14px 26px rgb(15 122 75 / 0.27);
+}
+
+.action-secondary:hover {
+  background: var(--surface-soft);
+  border-color: var(--accent);
+}
+
+.icon-tile {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.5rem;
+  background: linear-gradient(
+    135deg,
+    rgb(15 122 75 / 0.14),
+    rgb(200 137 33 / 0.13)
+  );
+  color: var(--accent-strong);
+}
+
+.field-input {
+  min-height: 2.75rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--border);
+  background: rgb(255 255 255 / 0.9);
+  padding-inline: 0.75rem;
+  font-size: 1rem;
+  outline: none;
+}
+
+.field-input:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 4px rgb(15 122 75 / 0.11);
+}
+
+.status-pill {
+  display: inline-flex;
+  min-height: 1.6rem;
+  align-items: center;
+  gap: 0.35rem;
+  border-radius: 999px;
+  background: rgb(15 122 75 / 0.1);
+  padding-inline: 0.65rem;
+  color: var(--accent-strong);
+  font-size: 0.75rem;
+  font-weight: 750;
+}
+
+@media (min-width: 640px) {
+  .app-shell {
+    padding-inline: 2rem;
+  }
+}
+
+.skip-link {
+  position: fixed;
+  left: 1rem;
+  top: 1rem;
+  z-index: 50;
+  transform: translateY(-150%);
+  border-radius: 0.375rem;
+  background: var(--accent);
+  color: white;
+  font-size: 0.875rem;
+  font-weight: 700;
+  padding: 0.625rem 0.875rem;
+  transition: transform 150ms ease;
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
