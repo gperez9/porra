@@ -6,7 +6,13 @@ import groups from "./seed/fifa-2026/groups.json";
 import knockoutTemplate from "./seed/fifa-2026/knockout-template.json";
 import teams from "./seed/fifa-2026/teams.json";
 
-process.loadEnvFile?.(".env");
+try {
+  process.loadEnvFile?.(".env");
+} catch (error) {
+  if ((error as NodeJS.ErrnoException).code !== "ENOENT") {
+    throw error;
+  }
+}
 
 const prisma = new PrismaClient({
   datasources: {

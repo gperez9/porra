@@ -1,7 +1,13 @@
 import process from "node:process";
 import { PrismaClient } from "@prisma/client";
 
-process.loadEnvFile?.(".env");
+try {
+  process.loadEnvFile?.(".env");
+} catch (error) {
+  if ((error as NodeJS.ErrnoException).code !== "ENOENT") {
+    throw error;
+  }
+}
 
 const prisma = new PrismaClient({
   datasources: {
