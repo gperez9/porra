@@ -10,6 +10,7 @@ type PredictionFormProps = {
   ) => Promise<PredictionActionState>;
   buttonLabel: string;
   defaultName?: string;
+  disabled?: boolean;
   hiddenPredictionId?: string;
 };
 
@@ -21,6 +22,7 @@ export function PredictionForm({
   action,
   buttonLabel,
   defaultName = "",
+  disabled = false,
   hiddenPredictionId
 }: PredictionFormProps) {
   const [state, formAction, isPending] = useActionState(action, initialState);
@@ -41,6 +43,7 @@ export function PredictionForm({
           aria-invalid={state.error ? "true" : undefined}
           className="field-input"
           defaultValue={defaultName}
+          disabled={disabled}
           maxLength={80}
           minLength={3}
           name="name"
@@ -60,7 +63,7 @@ export function PredictionForm({
 
       <button
         className="action-primary disabled:cursor-wait disabled:opacity-70"
-        disabled={isPending}
+        disabled={disabled || isPending}
         type="submit"
       >
         {isPending ? "Guardando..." : buttonLabel}

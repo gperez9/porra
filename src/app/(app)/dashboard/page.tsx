@@ -8,12 +8,18 @@ import {
 } from "lucide-react";
 import { requireUser } from "@/auth/guards";
 import { logoutAction } from "@/app/(auth)/actions";
-import { findUserDashboardData } from "@/data/repositories/predictions.repo";
+import {
+  findUserDashboardData,
+  getCurrentTournamentEditBlockReason
+} from "@/data/repositories/predictions.repo";
 import { PredictionSummaryList } from "@/features/dashboard/prediction-summary-list";
 
 export default async function DashboardPage() {
   const user = await requireUser();
-  const dashboard = await findUserDashboardData(user.id);
+  const [dashboard, blockReason] = await Promise.all([
+    findUserDashboardData(user.id),
+    getCurrentTournamentEditBlockReason(user.id)
+  ]);
 
   return (
     <main className="app-shell flex max-w-6xl flex-col">
@@ -41,13 +47,15 @@ export default async function DashboardPage() {
             Gestiona tus borradores y prepara varias versiones de tu porra.
           </p>
           <div className="mt-5 flex flex-wrap gap-3">
-            <Link
-              className="action-primary min-h-10 px-3"
-              href="/predictions/new"
-            >
-              <FilePlus2 aria-hidden="true" size={17} />
-              Nueva prediccion
-            </Link>
+            {blockReason ? null : (
+              <Link
+                className="action-primary min-h-10 px-3"
+                href="/predictions/new"
+              >
+                <FilePlus2 aria-hidden="true" size={17} />
+                Nueva prediccion
+              </Link>
+            )}
             <Link
               className="action-secondary min-h-10 px-3"
               href="/predictions"
@@ -120,7 +128,15 @@ export default async function DashboardPage() {
               Ver todas
             </Link>
           </div>
-          <PredictionSummaryList predictions={dashboard.predictions} />
+          {blockReason ? (
+            <p className="mb-4 rounded-md border border-amber-200 bg-amber-50 px-3 py-2 text-sm font-medium text-amber-800">
+              {blockReason}
+            </p>
+          ) : null}
+          <PredictionSummaryList
+            editBlockReason={blockReason}
+            predictions={dashboard.predictions}
+          />
         </div>
 
         <aside className="panel rounded-lg p-5">

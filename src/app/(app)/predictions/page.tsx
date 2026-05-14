@@ -1,12 +1,18 @@
 import Link from "next/link";
-import { FilePlus2, Pencil, Trophy } from "lucide-react";
+import { FilePlus2, Lock, Pencil, Trophy } from "lucide-react";
 import { requireUser } from "@/auth/guards";
-import { findPredictionsByUser } from "@/data/repositories/predictions.repo";
+import {
+  findPredictionsByUser,
+  getCurrentTournamentEditBlockReason
+} from "@/data/repositories/predictions.repo";
 import { getPredictionStatusLabelFromResultCount } from "@/domain/predictions/dashboardSummary";
 
 export default async function PredictionsPage() {
   const user = await requireUser();
-  const predictions = await findPredictionsByUser(user.id);
+  const [predictions, blockReason] = await Promise.all([
+    findPredictionsByUser(user.id),
+    getCurrentTournamentEditBlockReason(user.id)
+  ]);
 
   return (
     <main className="app-shell flex max-w-5xl flex-col">
@@ -16,11 +22,27 @@ export default async function PredictionsPage() {
           <h1 className="mt-1 text-3xl font-bold">Mis predicciones</h1>
         </div>
 
-        <Link className="action-primary min-h-10 px-3" href="/predictions/new">
-          <FilePlus2 aria-hidden="true" size={18} />
-          Nueva
-        </Link>
+        {blockReason ? (
+          <span className="action-secondary min-h-10 px-3 text-[var(--muted)]">
+            <Lock aria-hidden="true" size={18} />
+            Pausadas
+          </span>
+        ) : (
+          <Link
+            className="action-primary min-h-10 px-3"
+            href="/predictions/new"
+          >
+            <FilePlus2 aria-hidden="true" size={18} />
+            Nueva
+          </Link>
+        )}
       </header>
+
+      {blockReason ? (
+        <p className="mt-5 rounded-md border border-amber-200 bg-amber-50 px-3 py-2 text-sm font-medium text-amber-800">
+          {blockReason}
+        </p>
+      ) : null}
 
       {predictions.length === 0 ? (
         <section className="grid flex-1 place-items-center py-12">
@@ -33,9 +55,11 @@ export default async function PredictionsPage() {
               Crea tu primera porra y dejala preparada para completar marcadores
               en la siguiente fase.
             </p>
-            <Link className="action-primary mt-5" href="/predictions/new">
-              Crear prediccion
-            </Link>
+            {blockReason ? null : (
+              <Link className="action-primary mt-5" href="/predictions/new">
+                Crear prediccion
+              </Link>
+            )}
           </div>
         </section>
       ) : (

@@ -81,6 +81,7 @@ export default async function PredictionGroupsPage({
             group={group}
             key={`${predictionId}:${group.code}`}
             predictionId={predictionId}
+            readOnly={Boolean(blockReason)}
           />
         ))}
       </div>

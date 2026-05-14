@@ -6,10 +6,12 @@ import {
 } from "@/domain/predictions/dashboardSummary";
 
 type PredictionSummaryListProps = {
+  editBlockReason?: string | null;
   predictions: DashboardPredictionSummary[];
 };
 
 export function PredictionSummaryList({
+  editBlockReason = null,
   predictions
 }: PredictionSummaryListProps) {
   if (predictions.length === 0) {
@@ -23,9 +25,11 @@ export function PredictionSummaryList({
           <p className="mt-2 text-sm leading-6 text-[var(--muted)]">
             Crea tu primera porra y empieza por la fase de grupos.
           </p>
-          <Link className="action-primary mt-5" href="/predictions/new">
-            Crear prediccion
-          </Link>
+          {editBlockReason ? null : (
+            <Link className="action-primary mt-5" href="/predictions/new">
+              Crear prediccion
+            </Link>
+          )}
         </div>
       </section>
     );

@@ -49,6 +49,7 @@ type GroupEditorData = {
 type GroupPredictionEditorProps = {
   predictionId: string;
   group: GroupEditorData;
+  readOnly?: boolean;
 };
 
 const initialState: GroupPredictionActionState = {
@@ -61,7 +62,8 @@ const useBrowserLayoutEffect =
 
 export function GroupPredictionEditor({
   predictionId,
-  group
+  group,
+  readOnly = false
 }: GroupPredictionEditorProps) {
   const formRef = useRef<HTMLFormElement>(null);
   const [state, formAction, isPending] = useActionState(
@@ -85,6 +87,10 @@ export function GroupPredictionEditor({
   );
 
   useBrowserLayoutEffect(() => {
+    if (readOnly) {
+      return;
+    }
+
     const form = formRef.current;
 
     if (!form) {
@@ -121,9 +127,13 @@ export function GroupPredictionEditor({
     });
 
     return () => window.cancelAnimationFrame(frameId);
-  }, [draftStorageKey, initialScoreValues, scoreInputNames]);
+  }, [draftStorageKey, initialScoreValues, readOnly, scoreInputNames]);
 
   useEffect(() => {
+    if (readOnly) {
+      return;
+    }
+
     if (state.saved) {
       removeDraftValues(draftStorageKey);
       const frameId = window.requestAnimationFrame(() => {
@@ -132,9 +142,13 @@ export function GroupPredictionEditor({
 
       return () => window.cancelAnimationFrame(frameId);
     }
-  }, [draftStorageKey, state.saved]);
+  }, [draftStorageKey, readOnly, state.saved]);
 
   useEffect(() => {
+    if (readOnly) {
+      return;
+    }
+
     const form = formRef.current;
 
     if (!form) {
@@ -172,7 +186,7 @@ export function GroupPredictionEditor({
       window.removeEventListener("beforeunload", handlePageExit);
       window.removeEventListener("pagehide", handlePageExit);
     };
-  }, [draftStorageKey, initialScoreValues, scoreInputNames]);
+  }, [draftStorageKey, initialScoreValues, readOnly, scoreInputNames]);
 
   return (
     <section className="rounded-lg border border-[var(--border)] bg-[var(--surface)] p-4">
@@ -223,6 +237,7 @@ export function GroupPredictionEditor({
               className="min-h-10 w-full rounded-md border border-[var(--border)] px-2 text-center text-base outline-none focus:border-[var(--accent)]"
               data-score-input=""
               defaultValue={initialScoreValues[`homeGoals:${match.id}`] ?? ""}
+              disabled={readOnly}
               inputMode="numeric"
               min={0}
               name={`homeGoals:${match.id}`}
@@ -235,6 +250,7 @@ export function GroupPredictionEditor({
               className="min-h-10 w-full rounded-md border border-[var(--border)] px-2 text-center text-base outline-none focus:border-[var(--accent)]"
               data-score-input=""
               defaultValue={initialScoreValues[`awayGoals:${match.id}`] ?? ""}
+              disabled={readOnly}
               inputMode="numeric"
               min={0}
               name={`awayGoals:${match.id}`}
@@ -269,7 +285,7 @@ export function GroupPredictionEditor({
           </p>
         ) : null}
 
-        {hasDraftChanges ? (
+        {!readOnly && hasDraftChanges ? (
           <p
             aria-live="polite"
             className="rounded-md border border-amber-200 bg-amber-50 px-3 py-2 text-sm text-amber-800"
@@ -279,14 +295,16 @@ export function GroupPredictionEditor({
           </p>
         ) : null}
 
-        <button
-          className="inline-flex min-h-11 items-center justify-center gap-2 rounded-md bg-[var(--accent)] px-4 text-sm font-semibold text-white hover:bg-[var(--accent-strong)] disabled:cursor-wait disabled:opacity-70 sm:justify-self-start"
-          disabled={isPending}
-          type="submit"
-        >
-          <Save aria-hidden="true" size={18} />
-          {isPending ? "Guardando..." : "Guardar grupo"}
-        </button>
+        {readOnly ? null : (
+          <button
+            className="inline-flex min-h-11 items-center justify-center gap-2 rounded-md bg-[var(--accent)] px-4 text-sm font-semibold text-white hover:bg-[var(--accent-strong)] disabled:cursor-wait disabled:opacity-70 sm:justify-self-start"
+            disabled={isPending}
+            type="submit"
+          >
+            <Save aria-hidden="true" size={18} />
+            {isPending ? "Guardando..." : "Guardar grupo"}
+          </button>
+        )}
       </form>
 
       {group.standings ? (

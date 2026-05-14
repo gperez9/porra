@@ -29,6 +29,7 @@ type KnockoutEditorMatch = {
 type KnockoutPredictionEditorProps = {
   predictionId: string;
   matches: KnockoutEditorMatch[];
+  readOnly?: boolean;
 };
 
 type TeamSide = {
@@ -69,7 +70,8 @@ const stages: KnockoutEditorMatch["stage"][] = [
 
 export function KnockoutPredictionEditor({
   predictionId,
-  matches
+  matches,
+  readOnly = false
 }: KnockoutPredictionEditorProps) {
   const [state, formAction, isPending] = useActionState(
     saveKnockoutPredictionAction,
@@ -124,6 +126,7 @@ export function KnockoutPredictionEditor({
                   key={getMatchRenderKey(match)}
                   match={match}
                   onMatchChange={updateMatch}
+                  readOnly={readOnly}
                 />
               ))}
             </div>
@@ -149,27 +152,31 @@ export function KnockoutPredictionEditor({
         </p>
       ) : null}
 
-      <button
-        className="inline-flex min-h-11 items-center justify-center gap-2 rounded-md bg-[var(--accent)] px-4 text-sm font-semibold text-white hover:bg-[var(--accent-strong)] disabled:cursor-wait disabled:opacity-70 sm:justify-self-start"
-        disabled={isPending}
-        type="submit"
-      >
-        <Save aria-hidden="true" size={18} />
-        {isPending ? "Guardando..." : "Guardar eliminatorias"}
-      </button>
+      {readOnly ? null : (
+        <button
+          className="inline-flex min-h-11 items-center justify-center gap-2 rounded-md bg-[var(--accent)] px-4 text-sm font-semibold text-white hover:bg-[var(--accent-strong)] disabled:cursor-wait disabled:opacity-70 sm:justify-self-start"
+          disabled={isPending}
+          type="submit"
+        >
+          <Save aria-hidden="true" size={18} />
+          {isPending ? "Guardando..." : "Guardar eliminatorias"}
+        </button>
+      )}
     </form>
   );
 }
 
 function KnockoutMatchRow({
   match,
-  onMatchChange
+  onMatchChange,
+  readOnly
 }: {
   match: KnockoutEditorMatchState;
   onMatchChange: (
     matchId: string,
     updater: (match: KnockoutEditorMatchState) => KnockoutEditorMatchState
   ) => void;
+  readOnly: boolean;
 }) {
   const automaticQualifiedTeamId = getAutomaticQualifiedTeamId(
     match,
@@ -178,12 +185,9 @@ function KnockoutMatchRow({
   );
   const selectedQualifiedTeamId =
     match.qualifiedTeamId ?? automaticQualifiedTeamId;
-  const canChooseQualifiedTeam = canChooseQualifiedTeamByPenalties(match);
-  const selectHint = getQualifiedHint(
-    match,
-    automaticQualifiedTeamId,
-    canChooseQualifiedTeam
-  );
+  const canChooseQualifiedTeam =
+    !readOnly && canChooseQualifiedTeamByPenalties(match);
+  const selectHint = getQualifiedHint(match, automaticQualifiedTeamId);
   const qualifiedInputName = `qualifiedTeamId:${match.id}`;
 
   return (
@@ -208,7 +212,7 @@ function KnockoutMatchRow({
           aria-label={`${match.homeTeam?.name ?? match.homeSource} goles`}
           className="min-h-10 w-full rounded-md border border-[var(--border)] px-2 text-center text-base outline-none focus:border-[var(--accent)] disabled:bg-[var(--surface-strong)]"
           data-score-field="home"
-          disabled={!match.ready}
+          disabled={readOnly || !match.ready}
           inputMode="numeric"
           min={0}
           name={`homeGoals:${match.id}`}
@@ -231,7 +235,7 @@ function KnockoutMatchRow({
           aria-label={`${match.awayTeam?.name ?? match.awaySource} goles`}
           className="min-h-10 w-full rounded-md border border-[var(--border)] px-2 text-center text-base outline-none focus:border-[var(--accent)] disabled:bg-[var(--surface-strong)]"
           data-score-field="away"
-          disabled={!match.ready}
+          disabled={readOnly || !match.ready}
           inputMode="numeric"
           min={0}
           name={`awayGoals:${match.id}`}
@@ -336,8 +340,7 @@ function getAutomaticQualifiedTeamId(
 
 function getQualifiedHint(
   match: KnockoutEditorMatchState,
-  automaticQualifiedTeamId: string,
-  canChooseQualifiedTeam: boolean
+  automaticQualifiedTeamId: string
 ) {
   const home = parseScore(match.homeGoalsValue);
   const away = parseScore(match.awayGoalsValue);
@@ -346,8 +349,17 @@ function getQualifiedHint(
     return "Completa el marcador para calcular el clasificado.";
   }
 
-  if (canChooseQualifiedTeam) {
-    return "Empate: elige el clasificado por penaltis.";
+  if (home === away) {
+    const teamName =
+      match.qualifiedTeamId === match.homeTeam?.id
+        ? match.homeTeam.name
+        : match.awayTeam?.id === match.qualifiedTeamId
+          ? match.awayTeam.name
+          : null;
+
+    return teamName
+      ? `Clasifica ${teamName} por penaltis.`
+      : "Empate: elige el clasificado por penaltis.";
   }
 
   if (!automaticQualifiedTeamId) {

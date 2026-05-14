@@ -80,7 +80,7 @@ export default async function PredictionDetailPage({
             href={`/predictions/${prediction.id}/groups`}
           >
             <ListChecks aria-hidden="true" size={18} />
-            Rellenar grupos
+            {blockReason ? "Ver grupos" : "Rellenar grupos"}
           </Link>
         </div>
 
@@ -95,7 +95,7 @@ export default async function PredictionDetailPage({
             href={`/predictions/${prediction.id}/knockout`}
           >
             <Swords aria-hidden="true" size={18} />
-            Rellenar eliminatorias
+            {blockReason ? "Ver eliminatorias" : "Rellenar eliminatorias"}
           </Link>
         </div>
 
@@ -109,6 +109,7 @@ export default async function PredictionDetailPage({
               action={renamePredictionAction}
               buttonLabel="Guardar nombre"
               defaultName={prediction.name}
+              disabled={Boolean(blockReason)}
               hiddenPredictionId={prediction.id}
             />
           </div>
@@ -122,7 +123,11 @@ export default async function PredictionDetailPage({
             </p>
             <form action={duplicatePredictionAction} className="mt-5">
               <input name="predictionId" type="hidden" value={prediction.id} />
-              <button className="action-secondary" type="submit">
+              <button
+                className="action-secondary disabled:cursor-not-allowed disabled:opacity-60"
+                disabled={Boolean(blockReason)}
+                type="submit"
+              >
                 <Copy aria-hidden="true" size={18} />
                 Duplicar
               </button>
@@ -146,6 +151,7 @@ export default async function PredictionDetailPage({
                 />
                 <button
                   className="inline-flex min-h-11 items-center gap-2 rounded-md bg-red-700 px-4 text-sm font-semibold text-white hover:bg-red-800"
+                  disabled={Boolean(blockReason)}
                   type="submit"
                 >
                   <Trash2 aria-hidden="true" size={18} />

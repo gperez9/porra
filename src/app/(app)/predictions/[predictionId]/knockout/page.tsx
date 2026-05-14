@@ -77,6 +77,7 @@ export default async function PredictionKnockoutPage({
           <KnockoutPredictionEditor
             matches={data.matches}
             predictionId={predictionId}
+            readOnly={Boolean(blockReason)}
           />
         </>
       ) : (

@@ -1,6 +1,7 @@
 "use server";
 
 import { Prisma } from "@prisma/client";
+import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
 import { hashPassword, verifyPassword } from "@/auth/password";
 import {
@@ -54,6 +55,7 @@ export async function registerAction(
     throw error;
   }
 
+  revalidatePath("/", "layout");
   redirect("/dashboard");
 }
 
@@ -78,10 +80,12 @@ export async function loginAction(
   }
 
   await setSessionCookie(await createUserSession(user.id));
+  revalidatePath("/", "layout");
   redirect("/dashboard");
 }
 
 export async function logoutAction() {
   await deleteCurrentSession();
+  revalidatePath("/", "layout");
   redirect("/login");
 }
